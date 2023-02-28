@@ -12,6 +12,7 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y jq
 
 
+sudo $SCRIPT_PATH/setup_ssh.sh
 sudo $SCRIPT_PATH/setup_nginx.sh
 pip3 install -r $SCRIPT_PATH/requirements.txt
 
