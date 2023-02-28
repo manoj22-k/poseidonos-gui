@@ -6,4 +6,4 @@ printf "In\n\n\n\n\n\n\n" | openssl req -newkey rsa:2048 -nodes -keyout /etc/ssh
 
 #Permission to those files for grafana
 sudo chmod 777 /etc/ssh/ssh_pos_cert.pem
-sudo chmod 777 /etc/ssh/ssh_pos_cert.pem
+sudo chmod 777 /etc/ssh/ssh_pos_key.pem

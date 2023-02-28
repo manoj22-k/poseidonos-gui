@@ -37,6 +37,10 @@ perl -0777 -i.original -pe "s/# enable anonymous access\n;enabled = false/# enab
 sed -i "s/;org_role = Viewer/org_role = Admin/g" /etc/grafana/grafana.ini
 #Allow Embeding
 sed -i "s/;allow_embedding = false/allow_embedding = true/g" /etc/grafana/grafana.ini
+#Allow Embeding
+sed -i "s/;protocol = http/protocol = https/g" /etc/grafana/grafana.ini
+#Enable Annonymous authentication
+perl -0777 -i.original -pe "s/# https certs & key file\n;cert_file =\n;cert_key =/# https certs & key file\ncert_file = \/etc\/ssh\/ssh_pos_cert\.pem\ncert_key = \/etc\/ssh\/ssh_pos_key\.pem/igs" /etc/grafana/grafana.ini
 #Restart server
 sudo systemctl enable grafana-server
 sudo systemctl restart grafana-server

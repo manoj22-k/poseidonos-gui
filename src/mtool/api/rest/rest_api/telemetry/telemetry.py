@@ -7,7 +7,7 @@ from flask import jsonify, make_response
 def toJson(data):
     return json_util.dumps(data)
 
-grafa_url = "http://localhost:3500"
+grafa_url = "https://localhost:3500"
 ds_name = "poseidon"
 PROM_AGG_QUERY_PATH = 'http://{}:{}/api/v1/query?query=sum({}{{job=\"poseidonos\"}})'
 TIME_OUT = 10
