@@ -10,6 +10,6 @@ jobs:
           node-version: 16
       - run: |
           cd ${{github.workspace}}/src/mtool/ui 
-          npm install && npm install -g @lhci/cli@0.11.x
+          npm install --legacy-peer-deps && npm install -g @lhci/cli@0.11.x
           npm run build
           lhci autorun
