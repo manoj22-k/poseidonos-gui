@@ -3,6 +3,8 @@ name: LighthouseCI
 
 on:
   pull_request:
+  workflow_dispatch:
+  create:
 
 jobs:
   lighthouse:
